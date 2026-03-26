@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio - Krystian</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        h1 { color: #00ff88; }
+        .container { display: flex; gap: 20px; }
+        .card { background: #333; padding: 20px; border-radius: 10px; text-decoration: none; color: white; transition: 0.3s; border: 2px solid transparent; }
+        .card:hover { border-color: #00ff88; background: #444; transform: translateY(-5px); }
+    </style>
+</head>
+<body>
+    <h1>Moje Projekty</h1>
+    <p>Kliknij w projekt, aby go zobaczyć:</p>
+    
+    <div class="container">
+        <a href="./sylwia/" class="card">
+            <h3>Strona Sylwii</h3>
+            <p>Zobacz projekt →</p>
+        </a>
+
+        <a href="./komis/" class="card">
+            <h3>Komis Samochodowy</h3>
+            <p>Zobacz projekt →</p>
+        </a>
+    </div>
+</body>
+</html>
