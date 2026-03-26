@@ -5,26 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio - Krystian</title>
     <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        h1 { color: #00ff88; }
+        /* Styl dla całej strony */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: #0f0f0f; 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0;
+            overflow: hidden;
+            /* TU USTALAMY GŁÓWNY KURSOR (używamy emoji jako obrazka) */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size: 24px;"><text y="24">⚡</text></svg>'), auto;
+        }
+
+        h1 { color: #00ff88; text-shadow: 0 0 10px rgba(0,255,136,0.5); }
+        
         .container { display: flex; gap: 20px; }
-        .card { background: #333; padding: 20px; border-radius: 10px; text-decoration: none; color: white; transition: 0.3s; border: 2px solid transparent; }
-        .card:hover { border-color: #00ff88; background: #444; transform: translateY(-5px); }
+
+        .card { 
+            background: #1e1e1e; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-decoration: none; 
+            color: white; 
+            transition: all 0.3s ease; 
+            border: 1px solid #333;
+            text-align: center;
+            /* KURSOR PO NAJECHANIU NA PRZYCISK */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="font-size: 24px;"><text y="24">🔥</text></svg>'), pointer;
+        }
+
+        .card:hover { 
+            border-color: #00ff88; 
+            background: #252525; 
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,255,136,0.2);
+        }
+
+        .card h3 { margin: 0 0 10px 0; color: #00ff88; }
+        .card p { margin: 0; font-size: 0.9em; opacity: 0.7; }
     </style>
 </head>
 <body>
     <h1>Moje Projekty</h1>
-    <p>Kliknij w projekt, aby go zobaczyć:</p>
+    <p style="margin-bottom: 30px; opacity: 0.6;">Wybierz jeden z folderów poniżej:</p>
     
     <div class="container">
         <a href="./sylwia/" class="card">
             <h3>Strona Sylwii</h3>
-            <p>Zobacz projekt →</p>
+            <p>Projekt HTML/CSS</p>
         </a>
 
-        <a href="./komis/" class="card">
+        <a href="https://github.com/krystian192800/stronki/tree/main/komis" class="card">
             <h3>Komis Samochodowy</h3>
-            <p>Zobacz projekt →</p>
+            <p>Kod źródłowy PHP</p>
         </a>
     </div>
 </body>
