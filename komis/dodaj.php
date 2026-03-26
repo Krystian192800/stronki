@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// ------------------ Konfiguracja ------------------
+
 $DB_HOST = 'localhost';
 $DB_NAME = 'krystian192800';
 $DB_USER = 'auto_uzytkownik';
@@ -15,7 +15,7 @@ $ALLOWED_MIME = [
 ];
 $UPLOAD_DIR = __DIR__.'/uploads/';
 
-// ------------------ Połączenie z bazą ------------------
+
 try {
     $pdo = new PDO(
         "mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4",
@@ -28,13 +28,12 @@ try {
     exit("Błąd połączenia z bazą: ".htmlspecialchars($e->getMessage()));
 }
 
-// ------------------ Funkcje ------------------
+
 function isLoggedIn(): bool {
     return !empty($_SESSION['user_id']);
 }
 
-// ------------------ CSRF Token ------------------
-// Wygenerowanie tokena CSRF, jeśli go nie ma
+
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
