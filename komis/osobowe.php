@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-// ------------------ Konfiguracja bazy ------------------
+
 $DB_HOST = 'localhost';
 $DB_NAME = 'krystian192800';
 $DB_USER = 'auto_uzytkownik';
 $DB_PASS = 'Koper192800';
 
-// Połączenie z bazą
+
 try {
     $pdo = new PDO(
         "mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4",
